@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Study Time",
+  "version": "1.1",
+  "description": "Blocks non-educational YouTube videos and provides AI-powered video summaries using Google Gemini.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.youtube.com/*",
+    "https://youtu.be/*",
+    "https://generativelanguage.googleapis.com/*",
+    "https://tactiq-apps-prod.tactiq.io/*",
+    "https://chat.openai.com/*",
+    "https://chatgpt.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://youtu.be/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Study Time — Settings & Summary"
+  },"web_accessible_resources": [{
+  "resources": ["content-chatgpt.js"],
+  "matches": [ "https://chat.openai.com/*",
+    "https://chatgpt.com/*"]
+}],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

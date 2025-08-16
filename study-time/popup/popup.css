@@ -1,0 +1,142 @@
+body { 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; 
+  margin: 0; 
+  padding: 16px; 
+  width: 380px; 
+  background: #f8f9fa;
+  color: #333;
+}
+
+.container { 
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 { 
+  margin: 0 0 16px 0; 
+  color: #1a1a1a;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+label { 
+  display: block; 
+  margin-top: 16px; 
+  font-size: 13px; 
+  color: #374151;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+input, select { 
+  width: 100%; 
+  padding: 10px 12px; 
+  box-sizing: border-box; 
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 13px;
+  background: white;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.summary-settings {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.summary-settings label {
+  margin-top: 0;
+  color: #1f2937;
+}
+
+.method-info {
+  margin: 8px 0 0 0;
+  font-size: 11px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.buttons { 
+  margin-top: 20px; 
+  display: flex; 
+  gap: 10px; 
+}
+
+button { 
+  flex: 1; 
+  padding: 10px 16px; 
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+#saveBtn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+#saveBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+#clearBtn {
+  background: #ef4444;
+  color: white;
+}
+
+#clearBtn:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.feature-info {
+  margin-top: 20px;
+  padding: 16px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-radius: 8px;
+  border: 1px solid #bae6fd;
+}
+
+.feature-info h3 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #0c4a6e;
+}
+
+.feature-info ul {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.feature-info li {
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.note { 
+  margin-top: 16px; 
+  font-size: 11px; 
+  color: #6b7280; 
+  line-height: 1.4;
+  padding: 12px;
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  border-radius: 6px;
+}

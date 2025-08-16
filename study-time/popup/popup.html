@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Study Time — Settings</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Study Time</h2>
+    
+    <label for="apiKey">Gemini API Key</label>
+    <input id="apiKey" type="text" placeholder="Paste your Gemini API key (AI Studio / Vertex)">
+
+    <label for="redirectPlaylist">Optional: study playlist URL</label>
+    <input id="redirectPlaylist" type="text" placeholder="https://www.youtube.com/playlist?list=...">
+
+    <div class="summary-settings">
+      <label for="summaryMethod">Summary Method</label>
+      <select id="summaryMethod">
+        <option value="gemini">Use Gemini API (Recommended)</option>
+        <option value="chatgpt">Redirect to ChatGPT</option>
+      </select>
+      <p class="method-info" id="methodInfo">
+        Uses your Gemini API key to generate summaries directly in the extension.
+      </p>
+    </div>
+
+    <div class="buttons">
+      <button id="saveBtn">Save</button>
+      <button id="clearBtn">Clear Key</button>
+    </div>
+    
+    <div class="feature-info">
+      <h3>Features:</h3>
+      <ul>
+        <li>🔒 <strong>Video Blocking:</strong> Automatically blocks non-educational videos</li>
+        <li>📝 <strong>Video Summary:</strong> Click the "Summarize Video" button on any YouTube video</li>
+        <li>🤖 <strong>AI-Powered:</strong> Uses Google Gemini for intelligent classification and summaries</li>
+      </ul>
+    </div>
+    
+    <p class="note">
+      <strong>Tip:</strong> For testing, you can use a smaller model name in background.js. The summary feature requires transcript availability.
+    </p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
